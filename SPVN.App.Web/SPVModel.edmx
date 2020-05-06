@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SAPVENModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SAPVENModelStoreContainer">
+          <EntitySet Name="T_Caracteristica" EntityType="SAPVENModel.Store.T_Caracteristica" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Categoria" EntityType="SAPVENModel.Store.T_Categoria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DetalleOferta" EntityType="SAPVENModel.Store.T_DetalleOferta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DetallePedido" EntityType="SAPVENModel.Store.T_DetallePedido" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Empresa" EntityType="SAPVENModel.Store.T_Empresa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Mensaje" EntityType="SAPVENModel.Store.T_Mensaje" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Oferta" EntityType="SAPVENModel.Store.T_Oferta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Pedido" EntityType="SAPVENModel.Store.T_Pedido" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Perfil" EntityType="SAPVENModel.Store.T_Perfil" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_PerfilxPermiso" EntityType="SAPVENModel.Store.T_PerfilxPermiso" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Permiso" EntityType="SAPVENModel.Store.T_Permiso" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Producto" EntityType="SAPVENModel.Store.T_Producto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Suscripcion" EntityType="SAPVENModel.Store.T_Suscripcion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Usuario" EntityType="SAPVENModel.Store.T_Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Venta" EntityType="SAPVENModel.Store.T_Venta" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_T_DetalleOferta_T_Caracteristica" Association="SAPVENModel.Store.FK_T_DetalleOferta_T_Caracteristica">
+            <End Role="T_Caracteristica" EntitySet="T_Caracteristica" />
+            <End Role="T_DetalleOferta" EntitySet="T_DetalleOferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleOferta_T_Oferta" Association="SAPVENModel.Store.FK_T_DetalleOferta_T_Oferta">
+            <End Role="T_Oferta" EntitySet="T_Oferta" />
+            <End Role="T_DetalleOferta" EntitySet="T_DetalleOferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetallePedido_T_Oferta" Association="SAPVENModel.Store.FK_T_DetallePedido_T_Oferta">
+            <End Role="T_Oferta" EntitySet="T_Oferta" />
+            <End Role="T_DetallePedido" EntitySet="T_DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetallePedido_T_Pedido" Association="SAPVENModel.Store.FK_T_DetallePedido_T_Pedido">
+            <End Role="T_Pedido" EntitySet="T_Pedido" />
+            <End Role="T_DetallePedido" EntitySet="T_DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Empresa_T_Usuario" Association="SAPVENModel.Store.FK_T_Empresa_T_Usuario">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Empresa" EntitySet="T_Empresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Mensaje_T_Usuario" Association="SAPVENModel.Store.FK_T_Mensaje_T_Usuario">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Mensaje" EntitySet="T_Mensaje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Mensaje_T_Usuario1" Association="SAPVENModel.Store.FK_T_Mensaje_T_Usuario1">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Mensaje" EntitySet="T_Mensaje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Oferta_T_Empresa" Association="SAPVENModel.Store.FK_T_Oferta_T_Empresa">
+            <End Role="T_Empresa" EntitySet="T_Empresa" />
+            <End Role="T_Oferta" EntitySet="T_Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Oferta_T_Producto" Association="SAPVENModel.Store.FK_T_Oferta_T_Producto">
+            <End Role="T_Producto" EntitySet="T_Producto" />
+            <End Role="T_Oferta" EntitySet="T_Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Pedido_T_Usuario" Association="SAPVENModel.Store.FK_T_Pedido_T_Usuario">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Pedido" EntitySet="T_Pedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PerfilxPermiso_T_Perfil" Association="SAPVENModel.Store.FK_T_PerfilxPermiso_T_Perfil">
+            <End Role="T_Perfil" EntitySet="T_Perfil" />
+            <End Role="T_PerfilxPermiso" EntitySet="T_PerfilxPermiso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PerfilxPermiso_T_Permiso" Association="SAPVENModel.Store.FK_T_PerfilxPermiso_T_Permiso">
+            <End Role="T_Permiso" EntitySet="T_Permiso" />
+            <End Role="T_PerfilxPermiso" EntitySet="T_PerfilxPermiso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Producto_T_Categoria" Association="SAPVENModel.Store.FK_T_Producto_T_Categoria">
+            <End Role="T_Categoria" EntitySet="T_Categoria" />
+            <End Role="T_Producto" EntitySet="T_Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Suscripcion_T_Empresa" Association="SAPVENModel.Store.FK_T_Suscripcion_T_Empresa">
+            <End Role="T_Empresa" EntitySet="T_Empresa" />
+            <End Role="T_Suscripcion" EntitySet="T_Suscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Suscripcion_T_Usuario" Association="SAPVENModel.Store.FK_T_Suscripcion_T_Usuario">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Suscripcion" EntitySet="T_Suscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Usuario_T_Perfil" Association="SAPVENModel.Store.FK_T_Usuario_T_Perfil">
+            <End Role="T_Perfil" EntitySet="T_Perfil" />
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Venta_T_Pedido" Association="SAPVENModel.Store.FK_T_Venta_T_Pedido">
+            <End Role="T_Pedido" EntitySet="T_Pedido" />
+            <End Role="T_Venta" EntitySet="T_Venta" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="T_Caracteristica">
+          <Key>
+            <PropertyRef Name="ID_Caracteristica" />
+          </Key>
+          <Property Name="ID_Caracteristica" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Caracteristica" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion_Caracteristica" Type="nvarchar" MaxLength="120" />
+          <Property Name="Tipo_Caracteristica" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_Categoria">
+          <Key>
+            <PropertyRef Name="ID_Categoria" />
+          </Key>
+          <Property Name="ID_Categoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Categoria" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion_Categoria" Type="nvarchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="T_DetalleOferta">
+          <Key>
+            <PropertyRef Name="ID_DetalleOferta" />
+          </Key>
+          <Property Name="ID_DetalleOferta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Oferta" Type="int" Nullable="false" />
+          <Property Name="ID_Caracteristica" Type="int" Nullable="false" />
+          <Property Name="Valor_DetalleOferta" Type="text" Nullable="false" />
+          <Property Name="FechaModificacion_DetalleOferta" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_DetallePedido">
+          <Key>
+            <PropertyRef Name="ID_DetallePeddo" />
+          </Key>
+          <Property Name="ID_DetallePeddo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Oferta" Type="int" Nullable="false" />
+          <Property Name="Cantidad" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="FechaModificacion_DetallePedido" Type="datetime" Nullable="false" />
+          <Property Name="ID_Pedido" Type="int" Nullable="false" />
+          <Property Name="Vigente_Pedido" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Empresa">
+          <Key>
+            <PropertyRef Name="RUC_Empresa" />
+          </Key>
+          <Property Name="RUC_Empresa" Type="int" Nullable="false" />
+          <Property Name="RazónSocial_Empresa" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="Direccion_Empresa" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Telefono_Empresa" Type="int" />
+          <Property Name="Pais_Empresa" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Correo_Empresa" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Descripcion_Empresa" Type="nvarchar(max)" />
+          <Property Name="MaxCapProd_Empresa" Type="int" />
+          <Property Name="FechaRegistro_Empresa" Type="datetime" Nullable="false" />
+          <Property Name="Logo_Empresa" Type="image" />
+          <Property Name="Movil_Empresa" Type="int" />
+          <Property Name="ID_UsuarioRepresentante" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Mensaje">
+          <Key>
+            <PropertyRef Name="ID_Mensaje" />
+          </Key>
+          <Property Name="ID_Mensaje" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Contenido_Mensaje" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaRegistro_Mensaje" Type="datetime" Nullable="false" />
+          <Property Name="ID_UsuarioEnviante" Type="int" Nullable="false" />
+          <Property Name="ID_UsuarioReceptor" Type="int" />
+          <Property Name="EsPublico_Mensaje" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Oferta">
+          <Key>
+            <PropertyRef Name="ID_Oferta" />
+          </Key>
+          <Property Name="ID_Oferta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ManejaStock_Oferta" Type="bit" Nullable="false" />
+          <Property Name="Stock_Oferta" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="Observacion_Oferta" Type="nvarchar" MaxLength="80" />
+          <Property Name="Ranking_Oferta" Type="nvarchar" MaxLength="10" />
+          <Property Name="HastaTerminado_Oferta" Type="bit" Nullable="false" />
+          <Property Name="FechaInicio_Oferta" Type="datetime" />
+          <Property Name="FechaFin_Oferta" Type="datetime" />
+          <Property Name="ID_Producto" Type="int" />
+          <Property Name="ID_Empresa" Type="int" />
+        </EntityType>
+        <EntityType Name="T_Pedido">
+          <Key>
+            <PropertyRef Name="ID_Pedido" />
+          </Key>
+          <Property Name="ID_Pedido" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FechaApertura_Pedido" Type="datetime" Nullable="false" />
+          <Property Name="EsOfertado_Pedido" Type="bit" Nullable="false" />
+          <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ID_Usuario" Type="int" />
+        </EntityType>
+        <EntityType Name="T_Perfil">
+          <Key>
+            <PropertyRef Name="ID_Perfil" />
+          </Key>
+          <Property Name="ID_Perfil" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Perfil" Type="nvarchar" Nullable="false" MaxLength="35" />
+          <Property Name="Descripcion_Perfil" Type="nvarchar" MaxLength="90" />
+        </EntityType>
+        <EntityType Name="T_PerfilxPermiso">
+          <Key>
+            <PropertyRef Name="ID_Perfil" />
+            <PropertyRef Name="ID_Permiso" />
+          </Key>
+          <Property Name="ID_Perfil" Type="int" Nullable="false" />
+          <Property Name="ID_Permiso" Type="int" Nullable="false" />
+          <Property Name="Habilitado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Permiso">
+          <Key>
+            <PropertyRef Name="ID_Permiso" />
+          </Key>
+          <Property Name="ID_Permiso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Permiso" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="Descripcion_Permiso" Type="nvarchar" MaxLength="80" />
+          <Property Name="NombrePaquete_Permiso" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="T_Producto">
+          <Key>
+            <PropertyRef Name="ID_Producto" />
+          </Key>
+          <Property Name="ID_Producto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion_Producto" Type="nvarchar" Nullable="false" MaxLength="70" />
+          <Property Name="Foto_Producto" Type="image" />
+          <Property Name="ID_Categoria" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Suscripcion">
+          <Key>
+            <PropertyRef Name="ID_Usuario" />
+            <PropertyRef Name="ID_Empresa" />
+          </Key>
+          <Property Name="PermitirCorreo_Suscripcion" Type="bit" Nullable="false" />
+          <Property Name="FechaRegistro_Suscripcion" Type="datetime" Nullable="false" />
+          <Property Name="Estado_Suscripcion" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="ID_Usuario" Type="int" Nullable="false" />
+          <Property Name="ID_Empresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Usuario">
+          <Key>
+            <PropertyRef Name="ID_Usuario" />
+          </Key>
+          <Property Name="ID_Usuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Usuario" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ApellidoPaterno_Usuario" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="ApellidoMaterno_Usuario" Type="nvarchar" MaxLength="40" />
+          <Property Name="NombreRegistro_Usuario" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="FechaRegistro_Usuario" Type="datetime" Nullable="false" />
+          <Property Name="Correo_Usuario" Type="nvarchar" Nullable="false" MaxLength="70" />
+          <Property Name="Contraseña_Usuario" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="Foto_Usuario" Type="image" />
+          <Property Name="Estado_Usuario" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Pais_Usuario" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Direccion_Usuario" Type="nvarchar(max)" />
+          <Property Name="FechaNacimiento_Usuario" Type="datetime" Nullable="false" />
+          <Property Name="NotificarCorreo_Usuario" Type="bit" Nullable="false" />
+          <Property Name="ID_Perfil" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Venta">
+          <Key>
+            <PropertyRef Name="ID_Venta" />
+          </Key>
+          <Property Name="ID_Venta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Pedido" Type="int" Nullable="false" />
+          <Property Name="FechaRegistro_Venta" Type="datetime" Nullable="false" />
+          <Property Name="Satisfecho_Venta" Type="bit" />
+          <Property Name="Observaciones_Venta" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_T_DetalleOferta_T_Caracteristica">
+          <End Role="T_Caracteristica" Type="SAPVENModel.Store.T_Caracteristica" Multiplicity="1" />
+          <End Role="T_DetalleOferta" Type="SAPVENModel.Store.T_DetalleOferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Caracteristica">
+              <PropertyRef Name="ID_Caracteristica" />
+            </Principal>
+            <Dependent Role="T_DetalleOferta">
+              <PropertyRef Name="ID_Caracteristica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleOferta_T_Oferta">
+          <End Role="T_Oferta" Type="SAPVENModel.Store.T_Oferta" Multiplicity="1" />
+          <End Role="T_DetalleOferta" Type="SAPVENModel.Store.T_DetalleOferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Oferta">
+              <PropertyRef Name="ID_Oferta" />
+            </Principal>
+            <Dependent Role="T_DetalleOferta">
+              <PropertyRef Name="ID_Oferta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetallePedido_T_Oferta">
+          <End Role="T_Oferta" Type="SAPVENModel.Store.T_Oferta" Multiplicity="1" />
+          <End Role="T_DetallePedido" Type="SAPVENModel.Store.T_DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Oferta">
+              <PropertyRef Name="ID_Oferta" />
+            </Principal>
+            <Dependent Role="T_DetallePedido">
+              <PropertyRef Name="ID_Oferta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetallePedido_T_Pedido">
+          <End Role="T_Pedido" Type="SAPVENModel.Store.T_Pedido" Multiplicity="1" />
+          <End Role="T_DetallePedido" Type="SAPVENModel.Store.T_DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Pedido">
+              <PropertyRef Name="ID_Pedido" />
+            </Principal>
+            <Dependent Role="T_DetallePedido">
+              <PropertyRef Name="ID_Pedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Empresa_T_Usuario">
+          <End Role="T_Usuario" Type="SAPVENModel.Store.T_Usuario" Multiplicity="1" />
+          <End Role="T_Empresa" Type="SAPVENModel.Store.T_Empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Empresa">
+              <PropertyRef Name="ID_UsuarioRepresentante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Mensaje_T_Usuario">
+          <End Role="T_Usuario" Type="SAPVENModel.Store.T_Usuario" Multiplicity="1" />
+          <End Role="T_Mensaje" Type="SAPVENModel.Store.T_Mensaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Mensaje">
+              <PropertyRef Name="ID_UsuarioEnviante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Mensaje_T_Usuario1">
+          <End Role="T_Usuario" Type="SAPVENModel.Store.T_Usuario" Multiplicity="0..1" />
+          <End Role="T_Mensaje" Type="SAPVENModel.Store.T_Mensaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Mensaje">
+              <PropertyRef Name="ID_UsuarioReceptor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Oferta_T_Empresa">
+          <End Role="T_Empresa" Type="SAPVENModel.Store.T_Empresa" Multiplicity="0..1" />
+          <End Role="T_Oferta" Type="SAPVENModel.Store.T_Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Empresa">
+              <PropertyRef Name="RUC_Empresa" />
+            </Principal>
+            <Dependent Role="T_Oferta">
+              <PropertyRef Name="ID_Empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Oferta_T_Producto">
+          <End Role="T_Producto" Type="SAPVENModel.Store.T_Producto" Multiplicity="0..1" />
+          <End Role="T_Oferta" Type="SAPVENModel.Store.T_Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Producto">
+              <PropertyRef Name="ID_Producto" />
+            </Principal>
+            <Dependent Role="T_Oferta">
+              <PropertyRef Name="ID_Producto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Pedido_T_Usuario">
+          <End Role="T_Usuario" Type="SAPVENModel.Store.T_Usuario" Multiplicity="0..1" />
+          <End Role="T_Pedido" Type="SAPVENModel.Store.T_Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Pedido">
+              <PropertyRef Name="ID_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PerfilxPermiso_T_Perfil">
+          <End Role="T_Perfil" Type="SAPVENModel.Store.T_Perfil" Multiplicity="1" />
+          <End Role="T_PerfilxPermiso" Type="SAPVENModel.Store.T_PerfilxPermiso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Perfil">
+              <PropertyRef Name="ID_Perfil" />
+            </Principal>
+            <Dependent Role="T_PerfilxPermiso">
+              <PropertyRef Name="ID_Perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PerfilxPermiso_T_Permiso">
+          <End Role="T_Permiso" Type="SAPVENModel.Store.T_Permiso" Multiplicity="1" />
+          <End Role="T_PerfilxPermiso" Type="SAPVENModel.Store.T_PerfilxPermiso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Permiso">
+              <PropertyRef Name="ID_Permiso" />
+            </Principal>
+            <Dependent Role="T_PerfilxPermiso">
+              <PropertyRef Name="ID_Permiso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Producto_T_Categoria">
+          <End Role="T_Categoria" Type="SAPVENModel.Store.T_Categoria" Multiplicity="1" />
+          <End Role="T_Producto" Type="SAPVENModel.Store.T_Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Categoria">
+              <PropertyRef Name="ID_Categoria" />
+            </Principal>
+            <Dependent Role="T_Producto">
+              <PropertyRef Name="ID_Categoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Suscripcion_T_Empresa">
+          <End Role="T_Empresa" Type="SAPVENModel.Store.T_Empresa" Multiplicity="1" />
+          <End Role="T_Suscripcion" Type="SAPVENModel.Store.T_Suscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Empresa">
+              <PropertyRef Name="RUC_Empresa" />
+            </Principal>
+            <Dependent Role="T_Suscripcion">
+              <PropertyRef Name="ID_Empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Suscripcion_T_Usuario">
+          <End Role="T_Usuario" Type="SAPVENModel.Store.T_Usuario" Multiplicity="1" />
+          <End Role="T_Suscripcion" Type="SAPVENModel.Store.T_Suscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Suscripcion">
+              <PropertyRef Name="ID_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Usuario_T_Perfil">
+          <End Role="T_Perfil" Type="SAPVENModel.Store.T_Perfil" Multiplicity="1" />
+          <End Role="T_Usuario" Type="SAPVENModel.Store.T_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Perfil">
+              <PropertyRef Name="ID_Perfil" />
+            </Principal>
+            <Dependent Role="T_Usuario">
+              <PropertyRef Name="ID_Perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Venta_T_Pedido">
+          <End Role="T_Pedido" Type="SAPVENModel.Store.T_Pedido" Multiplicity="1" />
+          <End Role="T_Venta" Type="SAPVENModel.Store.T_Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Pedido">
+              <PropertyRef Name="ID_Pedido" />
+            </Principal>
+            <Dependent Role="T_Venta">
+              <PropertyRef Name="ID_Pedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SAPVENModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SAPVENEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Caracteristica" EntityType="SAPVENModel.T_Caracteristica" />
+          <EntitySet Name="T_Categoria" EntityType="SAPVENModel.T_Categoria" />
+          <EntitySet Name="T_DetalleOferta" EntityType="SAPVENModel.T_DetalleOferta" />
+          <EntitySet Name="T_DetallePedido" EntityType="SAPVENModel.T_DetallePedido" />
+          <EntitySet Name="T_Empresa" EntityType="SAPVENModel.T_Empresa" />
+          <EntitySet Name="T_Mensaje" EntityType="SAPVENModel.T_Mensaje" />
+          <EntitySet Name="T_Oferta" EntityType="SAPVENModel.T_Oferta" />
+          <EntitySet Name="T_Pedido" EntityType="SAPVENModel.T_Pedido" />
+          <EntitySet Name="T_Perfil" EntityType="SAPVENModel.T_Perfil" />
+          <EntitySet Name="T_PerfilxPermiso" EntityType="SAPVENModel.T_PerfilxPermiso" />
+          <EntitySet Name="T_Permiso" EntityType="SAPVENModel.T_Permiso" />
+          <EntitySet Name="T_Producto" EntityType="SAPVENModel.T_Producto" />
+          <EntitySet Name="T_Suscripcion" EntityType="SAPVENModel.T_Suscripcion" />
+          <EntitySet Name="T_Usuario" EntityType="SAPVENModel.T_Usuario" />
+          <EntitySet Name="T_Venta" EntityType="SAPVENModel.T_Venta" />
+          <AssociationSet Name="FK_T_DetalleOferta_T_Caracteristica" Association="SAPVENModel.FK_T_DetalleOferta_T_Caracteristica">
+            <End Role="T_Caracteristica" EntitySet="T_Caracteristica" />
+            <End Role="T_DetalleOferta" EntitySet="T_DetalleOferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Producto_T_Categoria" Association="SAPVENModel.FK_T_Producto_T_Categoria">
+            <End Role="T_Categoria" EntitySet="T_Categoria" />
+            <End Role="T_Producto" EntitySet="T_Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleOferta_T_Oferta" Association="SAPVENModel.FK_T_DetalleOferta_T_Oferta">
+            <End Role="T_Oferta" EntitySet="T_Oferta" />
+            <End Role="T_DetalleOferta" EntitySet="T_DetalleOferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetallePedido_T_Oferta" Association="SAPVENModel.FK_T_DetallePedido_T_Oferta">
+            <End Role="T_Oferta" EntitySet="T_Oferta" />
+            <End Role="T_DetallePedido" EntitySet="T_DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetallePedido_T_Pedido" Association="SAPVENModel.FK_T_DetallePedido_T_Pedido">
+            <End Role="T_Pedido" EntitySet="T_Pedido" />
+            <End Role="T_DetallePedido" EntitySet="T_DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Empresa_T_Usuario" Association="SAPVENModel.FK_T_Empresa_T_Usuario">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Empresa" EntitySet="T_Empresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Oferta_T_Empresa" Association="SAPVENModel.FK_T_Oferta_T_Empresa">
+            <End Role="T_Empresa" EntitySet="T_Empresa" />
+            <End Role="T_Oferta" EntitySet="T_Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Suscripcion_T_Empresa" Association="SAPVENModel.FK_T_Suscripcion_T_Empresa">
+            <End Role="T_Empresa" EntitySet="T_Empresa" />
+            <End Role="T_Suscripcion" EntitySet="T_Suscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Mensaje_T_Usuario" Association="SAPVENModel.FK_T_Mensaje_T_Usuario">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Mensaje" EntitySet="T_Mensaje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Mensaje_T_Usuario1" Association="SAPVENModel.FK_T_Mensaje_T_Usuario1">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Mensaje" EntitySet="T_Mensaje" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Oferta_T_Producto" Association="SAPVENModel.FK_T_Oferta_T_Producto">
+            <End Role="T_Producto" EntitySet="T_Producto" />
+            <End Role="T_Oferta" EntitySet="T_Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Pedido_T_Usuario" Association="SAPVENModel.FK_T_Pedido_T_Usuario">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Pedido" EntitySet="T_Pedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Venta_T_Pedido" Association="SAPVENModel.FK_T_Venta_T_Pedido">
+            <End Role="T_Pedido" EntitySet="T_Pedido" />
+            <End Role="T_Venta" EntitySet="T_Venta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PerfilxPermiso_T_Perfil" Association="SAPVENModel.FK_T_PerfilxPermiso_T_Perfil">
+            <End Role="T_Perfil" EntitySet="T_Perfil" />
+            <End Role="T_PerfilxPermiso" EntitySet="T_PerfilxPermiso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Usuario_T_Perfil" Association="SAPVENModel.FK_T_Usuario_T_Perfil">
+            <End Role="T_Perfil" EntitySet="T_Perfil" />
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PerfilxPermiso_T_Permiso" Association="SAPVENModel.FK_T_PerfilxPermiso_T_Permiso">
+            <End Role="T_Permiso" EntitySet="T_Permiso" />
+            <End Role="T_PerfilxPermiso" EntitySet="T_PerfilxPermiso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Suscripcion_T_Usuario" Association="SAPVENModel.FK_T_Suscripcion_T_Usuario">
+            <End Role="T_Usuario" EntitySet="T_Usuario" />
+            <End Role="T_Suscripcion" EntitySet="T_Suscripcion" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="T_Caracteristica">
+          <Key>
+            <PropertyRef Name="ID_Caracteristica" />
+          </Key>
+          <Property Name="ID_Caracteristica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Caracteristica" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion_Caracteristica" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="Tipo_Caracteristica" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="T_DetalleOferta" Relationship="SAPVENModel.FK_T_DetalleOferta_T_Caracteristica" FromRole="T_Caracteristica" ToRole="T_DetalleOferta" />
+        </EntityType>
+        <EntityType Name="T_Categoria">
+          <Key>
+            <PropertyRef Name="ID_Categoria" />
+          </Key>
+          <Property Name="ID_Categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Categoria" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion_Categoria" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="T_Producto" Relationship="SAPVENModel.FK_T_Producto_T_Categoria" FromRole="T_Categoria" ToRole="T_Producto" />
+        </EntityType>
+        <EntityType Name="T_DetalleOferta">
+          <Key>
+            <PropertyRef Name="ID_DetalleOferta" />
+          </Key>
+          <Property Name="ID_DetalleOferta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Oferta" Type="Int32" Nullable="false" />
+          <Property Name="ID_Caracteristica" Type="Int32" Nullable="false" />
+          <Property Name="Valor_DetalleOferta" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="FechaModificacion_DetalleOferta" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="T_Caracteristica" Relationship="SAPVENModel.FK_T_DetalleOferta_T_Caracteristica" FromRole="T_DetalleOferta" ToRole="T_Caracteristica" />
+          <NavigationProperty Name="T_Oferta" Relationship="SAPVENModel.FK_T_DetalleOferta_T_Oferta" FromRole="T_DetalleOferta" ToRole="T_Oferta" />
+        </EntityType>
+        <EntityType Name="T_DetallePedido">
+          <Key>
+            <PropertyRef Name="ID_DetallePeddo" />
+          </Key>
+          <Property Name="ID_DetallePeddo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Oferta" Type="Int32" Nullable="false" />
+          <Property Name="Cantidad" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="FechaModificacion_DetallePedido" Type="DateTime" Nullable="false" />
+          <Property Name="ID_Pedido" Type="Int32" Nullable="false" />
+          <Property Name="Vigente_Pedido" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="T_Oferta" Relationship="SAPVENModel.FK_T_DetallePedido_T_Oferta" FromRole="T_DetallePedido" ToRole="T_Oferta" />
+          <NavigationProperty Name="T_Pedido" Relationship="SAPVENModel.FK_T_DetallePedido_T_Pedido" FromRole="T_DetallePedido" ToRole="T_Pedido" />
+        </EntityType>
+        <EntityType Name="T_Empresa">
+          <Key>
+            <PropertyRef Name="RUC_Empresa" />
+          </Key>
+          <Property Name="RUC_Empresa" Type="Int32" Nullable="false" />
+          <Property Name="RazónSocial_Empresa" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion_Empresa" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Telefono_Empresa" Type="Int32" />
+          <Property Name="Pais_Empresa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Correo_Empresa" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion_Empresa" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="MaxCapProd_Empresa" Type="Int32" />
+          <Property Name="FechaRegistro_Empresa" Type="DateTime" Nullable="false" />
+          <Property Name="Logo_Empresa" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Movil_Empresa" Type="Int32" />
+          <Property Name="ID_UsuarioRepresentante" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Usuario" Relationship="SAPVENModel.FK_T_Empresa_T_Usuario" FromRole="T_Empresa" ToRole="T_Usuario" />
+          <NavigationProperty Name="T_Oferta" Relationship="SAPVENModel.FK_T_Oferta_T_Empresa" FromRole="T_Empresa" ToRole="T_Oferta" />
+          <NavigationProperty Name="T_Suscripcion" Relationship="SAPVENModel.FK_T_Suscripcion_T_Empresa" FromRole="T_Empresa" ToRole="T_Suscripcion" />
+        </EntityType>
+        <EntityType Name="T_Mensaje">
+          <Key>
+            <PropertyRef Name="ID_Mensaje" />
+          </Key>
+          <Property Name="ID_Mensaje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Contenido_Mensaje" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FechaRegistro_Mensaje" Type="DateTime" Nullable="false" />
+          <Property Name="ID_UsuarioEnviante" Type="Int32" Nullable="false" />
+          <Property Name="ID_UsuarioReceptor" Type="Int32" />
+          <Property Name="EsPublico_Mensaje" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="T_Usuario" Relationship="SAPVENModel.FK_T_Mensaje_T_Usuario" FromRole="T_Mensaje" ToRole="T_Usuario" />
+          <NavigationProperty Name="T_Usuario1" Relationship="SAPVENModel.FK_T_Mensaje_T_Usuario1" FromRole="T_Mensaje" ToRole="T_Usuario" />
+        </EntityType>
+        <EntityType Name="T_Oferta">
+          <Key>
+            <PropertyRef Name="ID_Oferta" />
+          </Key>
+          <Property Name="ID_Oferta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ManejaStock_Oferta" Type="Boolean" Nullable="false" />
+          <Property Name="Stock_Oferta" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="Observacion_Oferta" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="Ranking_Oferta" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="HastaTerminado_Oferta" Type="Boolean" Nullable="false" />
+          <Property Name="FechaInicio_Oferta" Type="DateTime" />
+          <Property Name="FechaFin_Oferta" Type="DateTime" />
+          <Property Name="ID_Producto" Type="Int32" />
+          <Property Name="ID_Empresa" Type="Int32" />
+          <NavigationProperty Name="T_DetalleOferta" Relationship="SAPVENModel.FK_T_DetalleOferta_T_Oferta" FromRole="T_Oferta" ToRole="T_DetalleOferta" />
+          <NavigationProperty Name="T_DetallePedido" Relationship="SAPVENModel.FK_T_DetallePedido_T_Oferta" FromRole="T_Oferta" ToRole="T_DetallePedido" />
+          <NavigationProperty Name="T_Empresa" Relationship="SAPVENModel.FK_T_Oferta_T_Empresa" FromRole="T_Oferta" ToRole="T_Empresa" />
+          <NavigationProperty Name="T_Producto" Relationship="SAPVENModel.FK_T_Oferta_T_Producto" FromRole="T_Oferta" ToRole="T_Producto" />
+        </EntityType>
+        <EntityType Name="T_Pedido">
+          <Key>
+            <PropertyRef Name="ID_Pedido" />
+          </Key>
+          <Property Name="ID_Pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaApertura_Pedido" Type="DateTime" Nullable="false" />
+          <Property Name="EsOfertado_Pedido" Type="Boolean" Nullable="false" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ID_Usuario" Type="Int32" />
+          <NavigationProperty Name="T_DetallePedido" Relationship="SAPVENModel.FK_T_DetallePedido_T_Pedido" FromRole="T_Pedido" ToRole="T_DetallePedido" />
+          <NavigationProperty Name="T_Usuario" Relationship="SAPVENModel.FK_T_Pedido_T_Usuario" FromRole="T_Pedido" ToRole="T_Usuario" />
+          <NavigationProperty Name="T_Venta" Relationship="SAPVENModel.FK_T_Venta_T_Pedido" FromRole="T_Pedido" ToRole="T_Venta" />
+        </EntityType>
+        <EntityType Name="T_Perfil">
+          <Key>
+            <PropertyRef Name="ID_Perfil" />
+          </Key>
+          <Property Name="ID_Perfil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Perfil" Type="String" Nullable="false" MaxLength="35" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion_Perfil" Type="String" MaxLength="90" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="T_PerfilxPermiso" Relationship="SAPVENModel.FK_T_PerfilxPermiso_T_Perfil" FromRole="T_Perfil" ToRole="T_PerfilxPermiso" />
+          <NavigationProperty Name="T_Usuario" Relationship="SAPVENModel.FK_T_Usuario_T_Perfil" FromRole="T_Perfil" ToRole="T_Usuario" />
+        </EntityType>
+        <EntityType Name="T_PerfilxPermiso">
+          <Key>
+            <PropertyRef Name="ID_Perfil" />
+            <PropertyRef Name="ID_Permiso" />
+          </Key>
+          <Property Name="ID_Perfil" Type="Int32" Nullable="false" />
+          <Property Name="ID_Permiso" Type="Int32" Nullable="false" />
+          <Property Name="Habilitado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="T_Perfil" Relationship="SAPVENModel.FK_T_PerfilxPermiso_T_Perfil" FromRole="T_PerfilxPermiso" ToRole="T_Perfil" />
+          <NavigationProperty Name="T_Permiso" Relationship="SAPVENModel.FK_T_PerfilxPermiso_T_Permiso" FromRole="T_PerfilxPermiso" ToRole="T_Permiso" />
+        </EntityType>
+        <EntityType Name="T_Permiso">
+          <Key>
+            <PropertyRef Name="ID_Permiso" />
+          </Key>
+          <Property Name="ID_Permiso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Permiso" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="Descripcion_Permiso" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="NombrePaquete_Permiso" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="T_PerfilxPermiso" Relationship="SAPVENModel.FK_T_PerfilxPermiso_T_Permiso" FromRole="T_Permiso" ToRole="T_PerfilxPermiso" />
+        </EntityType>
+        <EntityType Name="T_Producto">
+          <Key>
+            <PropertyRef Name="ID_Producto" />
+          </Key>
+          <Property Name="ID_Producto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion_Producto" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+          <Property Name="Foto_Producto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ID_Categoria" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Categoria" Relationship="SAPVENModel.FK_T_Producto_T_Categoria" FromRole="T_Producto" ToRole="T_Categoria" />
+          <NavigationProperty Name="T_Oferta" Relationship="SAPVENModel.FK_T_Oferta_T_Producto" FromRole="T_Producto" ToRole="T_Oferta" />
+        </EntityType>
+        <EntityType Name="T_Suscripcion">
+          <Key>
+            <PropertyRef Name="ID_Usuario" />
+            <PropertyRef Name="ID_Empresa" />
+          </Key>
+          <Property Name="PermitirCorreo_Suscripcion" Type="Boolean" Nullable="false" />
+          <Property Name="FechaRegistro_Suscripcion" Type="DateTime" Nullable="false" />
+          <Property Name="Estado_Suscripcion" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="ID_Usuario" Type="Int32" Nullable="false" />
+          <Property Name="ID_Empresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Empresa" Relationship="SAPVENModel.FK_T_Suscripcion_T_Empresa" FromRole="T_Suscripcion" ToRole="T_Empresa" />
+          <NavigationProperty Name="T_Usuario" Relationship="SAPVENModel.FK_T_Suscripcion_T_Usuario" FromRole="T_Suscripcion" ToRole="T_Usuario" />
+        </EntityType>
+        <EntityType Name="T_Usuario">
+          <Key>
+            <PropertyRef Name="ID_Usuario" />
+          </Key>
+          <Property Name="ID_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Usuario" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ApellidoPaterno_Usuario" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="ApellidoMaterno_Usuario" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="NombreRegistro_Usuario" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="FechaRegistro_Usuario" Type="DateTime" Nullable="false" />
+          <Property Name="Correo_Usuario" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+          <Property Name="Contraseña_Usuario" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Foto_Usuario" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Estado_Usuario" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Pais_Usuario" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Direccion_Usuario" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="FechaNacimiento_Usuario" Type="DateTime" Nullable="false" />
+          <Property Name="NotificarCorreo_Usuario" Type="Boolean" Nullable="false" />
+          <Property Name="ID_Perfil" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Empresa" Relationship="SAPVENModel.FK_T_Empresa_T_Usuario" FromRole="T_Usuario" ToRole="T_Empresa" />
+          <NavigationProperty Name="T_Mensaje" Relationship="SAPVENModel.FK_T_Mensaje_T_Usuario" FromRole="T_Usuario" ToRole="T_Mensaje" />
+          <NavigationProperty Name="T_Mensaje1" Relationship="SAPVENModel.FK_T_Mensaje_T_Usuario1" FromRole="T_Usuario" ToRole="T_Mensaje" />
+          <NavigationProperty Name="T_Pedido" Relationship="SAPVENModel.FK_T_Pedido_T_Usuario" FromRole="T_Usuario" ToRole="T_Pedido" />
+          <NavigationProperty Name="T_Perfil" Relationship="SAPVENModel.FK_T_Usuario_T_Perfil" FromRole="T_Usuario" ToRole="T_Perfil" />
+          <NavigationProperty Name="T_Suscripcion" Relationship="SAPVENModel.FK_T_Suscripcion_T_Usuario" FromRole="T_Usuario" ToRole="T_Suscripcion" />
+        </EntityType>
+        <EntityType Name="T_Venta">
+          <Key>
+            <PropertyRef Name="ID_Venta" />
+          </Key>
+          <Property Name="ID_Venta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Pedido" Type="Int32" Nullable="false" />
+          <Property Name="FechaRegistro_Venta" Type="DateTime" Nullable="false" />
+          <Property Name="Satisfecho_Venta" Type="Boolean" />
+          <Property Name="Observaciones_Venta" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="T_Pedido" Relationship="SAPVENModel.FK_T_Venta_T_Pedido" FromRole="T_Venta" ToRole="T_Pedido" />
+        </EntityType>
+        <Association Name="FK_T_DetalleOferta_T_Caracteristica">
+          <End Role="T_Caracteristica" Type="SAPVENModel.T_Caracteristica" Multiplicity="1" />
+          <End Role="T_DetalleOferta" Type="SAPVENModel.T_DetalleOferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Caracteristica">
+              <PropertyRef Name="ID_Caracteristica" />
+            </Principal>
+            <Dependent Role="T_DetalleOferta">
+              <PropertyRef Name="ID_Caracteristica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Producto_T_Categoria">
+          <End Role="T_Categoria" Type="SAPVENModel.T_Categoria" Multiplicity="1" />
+          <End Role="T_Producto" Type="SAPVENModel.T_Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Categoria">
+              <PropertyRef Name="ID_Categoria" />
+            </Principal>
+            <Dependent Role="T_Producto">
+              <PropertyRef Name="ID_Categoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleOferta_T_Oferta">
+          <End Role="T_Oferta" Type="SAPVENModel.T_Oferta" Multiplicity="1" />
+          <End Role="T_DetalleOferta" Type="SAPVENModel.T_DetalleOferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Oferta">
+              <PropertyRef Name="ID_Oferta" />
+            </Principal>
+            <Dependent Role="T_DetalleOferta">
+              <PropertyRef Name="ID_Oferta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetallePedido_T_Oferta">
+          <End Role="T_Oferta" Type="SAPVENModel.T_Oferta" Multiplicity="1" />
+          <End Role="T_DetallePedido" Type="SAPVENModel.T_DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Oferta">
+              <PropertyRef Name="ID_Oferta" />
+            </Principal>
+            <Dependent Role="T_DetallePedido">
+              <PropertyRef Name="ID_Oferta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetallePedido_T_Pedido">
+          <End Role="T_Pedido" Type="SAPVENModel.T_Pedido" Multiplicity="1" />
+          <End Role="T_DetallePedido" Type="SAPVENModel.T_DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Pedido">
+              <PropertyRef Name="ID_Pedido" />
+            </Principal>
+            <Dependent Role="T_DetallePedido">
+              <PropertyRef Name="ID_Pedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Empresa_T_Usuario">
+          <End Role="T_Usuario" Type="SAPVENModel.T_Usuario" Multiplicity="1" />
+          <End Role="T_Empresa" Type="SAPVENModel.T_Empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Empresa">
+              <PropertyRef Name="ID_UsuarioRepresentante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Oferta_T_Empresa">
+          <End Role="T_Empresa" Type="SAPVENModel.T_Empresa" Multiplicity="0..1" />
+          <End Role="T_Oferta" Type="SAPVENModel.T_Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Empresa">
+              <PropertyRef Name="RUC_Empresa" />
+            </Principal>
+            <Dependent Role="T_Oferta">
+              <PropertyRef Name="ID_Empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Suscripcion_T_Empresa">
+          <End Role="T_Empresa" Type="SAPVENModel.T_Empresa" Multiplicity="1" />
+          <End Role="T_Suscripcion" Type="SAPVENModel.T_Suscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Empresa">
+              <PropertyRef Name="RUC_Empresa" />
+            </Principal>
+            <Dependent Role="T_Suscripcion">
+              <PropertyRef Name="ID_Empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Mensaje_T_Usuario">
+          <End Role="T_Usuario" Type="SAPVENModel.T_Usuario" Multiplicity="1" />
+          <End Role="T_Mensaje" Type="SAPVENModel.T_Mensaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Mensaje">
+              <PropertyRef Name="ID_UsuarioEnviante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Mensaje_T_Usuario1">
+          <End Role="T_Usuario" Type="SAPVENModel.T_Usuario" Multiplicity="0..1" />
+          <End Role="T_Mensaje" Type="SAPVENModel.T_Mensaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Mensaje">
+              <PropertyRef Name="ID_UsuarioReceptor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Oferta_T_Producto">
+          <End Role="T_Producto" Type="SAPVENModel.T_Producto" Multiplicity="0..1" />
+          <End Role="T_Oferta" Type="SAPVENModel.T_Oferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Producto">
+              <PropertyRef Name="ID_Producto" />
+            </Principal>
+            <Dependent Role="T_Oferta">
+              <PropertyRef Name="ID_Producto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Pedido_T_Usuario">
+          <End Role="T_Usuario" Type="SAPVENModel.T_Usuario" Multiplicity="0..1" />
+          <End Role="T_Pedido" Type="SAPVENModel.T_Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Pedido">
+              <PropertyRef Name="ID_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Venta_T_Pedido">
+          <End Role="T_Pedido" Type="SAPVENModel.T_Pedido" Multiplicity="1" />
+          <End Role="T_Venta" Type="SAPVENModel.T_Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Pedido">
+              <PropertyRef Name="ID_Pedido" />
+            </Principal>
+            <Dependent Role="T_Venta">
+              <PropertyRef Name="ID_Pedido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PerfilxPermiso_T_Perfil">
+          <End Role="T_Perfil" Type="SAPVENModel.T_Perfil" Multiplicity="1" />
+          <End Role="T_PerfilxPermiso" Type="SAPVENModel.T_PerfilxPermiso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Perfil">
+              <PropertyRef Name="ID_Perfil" />
+            </Principal>
+            <Dependent Role="T_PerfilxPermiso">
+              <PropertyRef Name="ID_Perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Usuario_T_Perfil">
+          <End Role="T_Perfil" Type="SAPVENModel.T_Perfil" Multiplicity="1" />
+          <End Role="T_Usuario" Type="SAPVENModel.T_Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Perfil">
+              <PropertyRef Name="ID_Perfil" />
+            </Principal>
+            <Dependent Role="T_Usuario">
+              <PropertyRef Name="ID_Perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PerfilxPermiso_T_Permiso">
+          <End Role="T_Permiso" Type="SAPVENModel.T_Permiso" Multiplicity="1" />
+          <End Role="T_PerfilxPermiso" Type="SAPVENModel.T_PerfilxPermiso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Permiso">
+              <PropertyRef Name="ID_Permiso" />
+            </Principal>
+            <Dependent Role="T_PerfilxPermiso">
+              <PropertyRef Name="ID_Permiso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Suscripcion_T_Usuario">
+          <End Role="T_Usuario" Type="SAPVENModel.T_Usuario" Multiplicity="1" />
+          <End Role="T_Suscripcion" Type="SAPVENModel.T_Suscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Usuario">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="T_Suscripcion">
+              <PropertyRef Name="ID_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SAPVENModelStoreContainer" CdmEntityContainer="SAPVENEntities">
+          <EntitySetMapping Name="T_Caracteristica"><EntityTypeMapping TypeName="SAPVENModel.T_Caracteristica"><MappingFragment StoreEntitySet="T_Caracteristica">
+            <ScalarProperty Name="ID_Caracteristica" ColumnName="ID_Caracteristica" />
+            <ScalarProperty Name="Nombre_Caracteristica" ColumnName="Nombre_Caracteristica" />
+            <ScalarProperty Name="Descripcion_Caracteristica" ColumnName="Descripcion_Caracteristica" />
+            <ScalarProperty Name="Tipo_Caracteristica" ColumnName="Tipo_Caracteristica" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Categoria"><EntityTypeMapping TypeName="SAPVENModel.T_Categoria"><MappingFragment StoreEntitySet="T_Categoria">
+            <ScalarProperty Name="ID_Categoria" ColumnName="ID_Categoria" />
+            <ScalarProperty Name="Nombre_Categoria" ColumnName="Nombre_Categoria" />
+            <ScalarProperty Name="Descripcion_Categoria" ColumnName="Descripcion_Categoria" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_DetalleOferta"><EntityTypeMapping TypeName="SAPVENModel.T_DetalleOferta"><MappingFragment StoreEntitySet="T_DetalleOferta">
+            <ScalarProperty Name="ID_DetalleOferta" ColumnName="ID_DetalleOferta" />
+            <ScalarProperty Name="ID_Oferta" ColumnName="ID_Oferta" />
+            <ScalarProperty Name="ID_Caracteristica" ColumnName="ID_Caracteristica" />
+            <ScalarProperty Name="Valor_DetalleOferta" ColumnName="Valor_DetalleOferta" />
+            <ScalarProperty Name="FechaModificacion_DetalleOferta" ColumnName="FechaModificacion_DetalleOferta" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_DetallePedido"><EntityTypeMapping TypeName="SAPVENModel.T_DetallePedido"><MappingFragment StoreEntitySet="T_DetallePedido">
+            <ScalarProperty Name="ID_DetallePeddo" ColumnName="ID_DetallePeddo" />
+            <ScalarProperty Name="ID_Oferta" ColumnName="ID_Oferta" />
+            <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+            <ScalarProperty Name="FechaModificacion_DetallePedido" ColumnName="FechaModificacion_DetallePedido" />
+            <ScalarProperty Name="ID_Pedido" ColumnName="ID_Pedido" />
+            <ScalarProperty Name="Vigente_Pedido" ColumnName="Vigente_Pedido" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Empresa"><EntityTypeMapping TypeName="SAPVENModel.T_Empresa"><MappingFragment StoreEntitySet="T_Empresa">
+            <ScalarProperty Name="RUC_Empresa" ColumnName="RUC_Empresa" />
+            <ScalarProperty Name="RazónSocial_Empresa" ColumnName="RazónSocial_Empresa" />
+            <ScalarProperty Name="Direccion_Empresa" ColumnName="Direccion_Empresa" />
+            <ScalarProperty Name="Telefono_Empresa" ColumnName="Telefono_Empresa" />
+            <ScalarProperty Name="Pais_Empresa" ColumnName="Pais_Empresa" />
+            <ScalarProperty Name="Correo_Empresa" ColumnName="Correo_Empresa" />
+            <ScalarProperty Name="Descripcion_Empresa" ColumnName="Descripcion_Empresa" />
+            <ScalarProperty Name="MaxCapProd_Empresa" ColumnName="MaxCapProd_Empresa" />
+            <ScalarProperty Name="FechaRegistro_Empresa" ColumnName="FechaRegistro_Empresa" />
+            <ScalarProperty Name="Logo_Empresa" ColumnName="Logo_Empresa" />
+            <ScalarProperty Name="Movil_Empresa" ColumnName="Movil_Empresa" />
+            <ScalarProperty Name="ID_UsuarioRepresentante" ColumnName="ID_UsuarioRepresentante" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Mensaje"><EntityTypeMapping TypeName="SAPVENModel.T_Mensaje"><MappingFragment StoreEntitySet="T_Mensaje">
+            <ScalarProperty Name="ID_Mensaje" ColumnName="ID_Mensaje" />
+            <ScalarProperty Name="Contenido_Mensaje" ColumnName="Contenido_Mensaje" />
+            <ScalarProperty Name="FechaRegistro_Mensaje" ColumnName="FechaRegistro_Mensaje" />
+            <ScalarProperty Name="ID_UsuarioEnviante" ColumnName="ID_UsuarioEnviante" />
+            <ScalarProperty Name="ID_UsuarioReceptor" ColumnName="ID_UsuarioReceptor" />
+            <ScalarProperty Name="EsPublico_Mensaje" ColumnName="EsPublico_Mensaje" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Oferta"><EntityTypeMapping TypeName="SAPVENModel.T_Oferta"><MappingFragment StoreEntitySet="T_Oferta">
+            <ScalarProperty Name="ID_Oferta" ColumnName="ID_Oferta" />
+            <ScalarProperty Name="ManejaStock_Oferta" ColumnName="ManejaStock_Oferta" />
+            <ScalarProperty Name="Stock_Oferta" ColumnName="Stock_Oferta" />
+            <ScalarProperty Name="Observacion_Oferta" ColumnName="Observacion_Oferta" />
+            <ScalarProperty Name="Ranking_Oferta" ColumnName="Ranking_Oferta" />
+            <ScalarProperty Name="HastaTerminado_Oferta" ColumnName="HastaTerminado_Oferta" />
+            <ScalarProperty Name="FechaInicio_Oferta" ColumnName="FechaInicio_Oferta" />
+            <ScalarProperty Name="FechaFin_Oferta" ColumnName="FechaFin_Oferta" />
+            <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
+            <ScalarProperty Name="ID_Empresa" ColumnName="ID_Empresa" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Pedido"><EntityTypeMapping TypeName="SAPVENModel.T_Pedido"><MappingFragment StoreEntitySet="T_Pedido">
+            <ScalarProperty Name="ID_Pedido" ColumnName="ID_Pedido" />
+            <ScalarProperty Name="FechaApertura_Pedido" ColumnName="FechaApertura_Pedido" />
+            <ScalarProperty Name="EsOfertado_Pedido" ColumnName="EsOfertado_Pedido" />
+            <ScalarProperty Name="Estado" ColumnName="Estado" />
+            <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Perfil"><EntityTypeMapping TypeName="SAPVENModel.T_Perfil"><MappingFragment StoreEntitySet="T_Perfil">
+            <ScalarProperty Name="ID_Perfil" ColumnName="ID_Perfil" />
+            <ScalarProperty Name="Nombre_Perfil" ColumnName="Nombre_Perfil" />
+            <ScalarProperty Name="Descripcion_Perfil" ColumnName="Descripcion_Perfil" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_PerfilxPermiso"><EntityTypeMapping TypeName="SAPVENModel.T_PerfilxPermiso"><MappingFragment StoreEntitySet="T_PerfilxPermiso">
+            <ScalarProperty Name="ID_Perfil" ColumnName="ID_Perfil" />
+            <ScalarProperty Name="ID_Permiso" ColumnName="ID_Permiso" />
+            <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Permiso"><EntityTypeMapping TypeName="SAPVENModel.T_Permiso"><MappingFragment StoreEntitySet="T_Permiso">
+            <ScalarProperty Name="ID_Permiso" ColumnName="ID_Permiso" />
+            <ScalarProperty Name="Nombre_Permiso" ColumnName="Nombre_Permiso" />
+            <ScalarProperty Name="Descripcion_Permiso" ColumnName="Descripcion_Permiso" />
+            <ScalarProperty Name="NombrePaquete_Permiso" ColumnName="NombrePaquete_Permiso" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Producto"><EntityTypeMapping TypeName="SAPVENModel.T_Producto"><MappingFragment StoreEntitySet="T_Producto">
+            <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
+            <ScalarProperty Name="Descripcion_Producto" ColumnName="Descripcion_Producto" />
+            <ScalarProperty Name="Foto_Producto" ColumnName="Foto_Producto" />
+            <ScalarProperty Name="ID_Categoria" ColumnName="ID_Categoria" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Suscripcion"><EntityTypeMapping TypeName="SAPVENModel.T_Suscripcion"><MappingFragment StoreEntitySet="T_Suscripcion">
+            <ScalarProperty Name="PermitirCorreo_Suscripcion" ColumnName="PermitirCorreo_Suscripcion" />
+            <ScalarProperty Name="FechaRegistro_Suscripcion" ColumnName="FechaRegistro_Suscripcion" />
+            <ScalarProperty Name="Estado_Suscripcion" ColumnName="Estado_Suscripcion" />
+            <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+            <ScalarProperty Name="ID_Empresa" ColumnName="ID_Empresa" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Usuario"><EntityTypeMapping TypeName="SAPVENModel.T_Usuario"><MappingFragment StoreEntitySet="T_Usuario">
+            <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+            <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+            <ScalarProperty Name="ApellidoPaterno_Usuario" ColumnName="ApellidoPaterno_Usuario" />
+            <ScalarProperty Name="ApellidoMaterno_Usuario" ColumnName="ApellidoMaterno_Usuario" />
+            <ScalarProperty Name="NombreRegistro_Usuario" ColumnName="NombreRegistro_Usuario" />
+            <ScalarProperty Name="FechaRegistro_Usuario" ColumnName="FechaRegistro_Usuario" />
+            <ScalarProperty Name="Correo_Usuario" ColumnName="Correo_Usuario" />
+            <ScalarProperty Name="Contraseña_Usuario" ColumnName="Contraseña_Usuario" />
+            <ScalarProperty Name="Foto_Usuario" ColumnName="Foto_Usuario" />
+            <ScalarProperty Name="Estado_Usuario" ColumnName="Estado_Usuario" />
+            <ScalarProperty Name="Pais_Usuario" ColumnName="Pais_Usuario" />
+            <ScalarProperty Name="Direccion_Usuario" ColumnName="Direccion_Usuario" />
+            <ScalarProperty Name="FechaNacimiento_Usuario" ColumnName="FechaNacimiento_Usuario" />
+            <ScalarProperty Name="NotificarCorreo_Usuario" ColumnName="NotificarCorreo_Usuario" />
+            <ScalarProperty Name="ID_Perfil" ColumnName="ID_Perfil" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Venta"><EntityTypeMapping TypeName="SAPVENModel.T_Venta"><MappingFragment StoreEntitySet="T_Venta">
+            <ScalarProperty Name="ID_Venta" ColumnName="ID_Venta" />
+            <ScalarProperty Name="ID_Pedido" ColumnName="ID_Pedido" />
+            <ScalarProperty Name="FechaRegistro_Venta" ColumnName="FechaRegistro_Venta" />
+            <ScalarProperty Name="Satisfecho_Venta" ColumnName="Satisfecho_Venta" />
+            <ScalarProperty Name="Observaciones_Venta" ColumnName="Observaciones_Venta" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SPVModel">
+        <EntityTypeShape EntityType="SAPVENModel.T_Caracteristica" Width="1.5" PointX="7.5" PointY="5.25" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Categoria" Width="1.5" PointX="3" PointY="4.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_DetalleOferta" Width="1.5" PointX="9.75" PointY="9" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_DetallePedido" Width="1.5" PointX="9.75" PointY="12.25" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Empresa" Width="1.5" PointX="5.25" PointY="8.25" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Mensaje" Width="1.5" PointX="5.25" PointY="12.875" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Oferta" Width="1.5" PointX="7.5" PointY="8.375" Height="3.7109993489583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Pedido" Width="1.5" PointX="5.25" PointY="16.25" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Perfil" Width="1.5" PointX="0.75" PointY="9.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_PerfilxPermiso" Width="1.5" PointX="3" PointY="7.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Permiso" Width="1.5" PointX="0.75" PointY="6.75" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Producto" Width="1.5" PointX="5.25" PointY="4.125" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Suscripcion" Width="1.5" PointX="7.5" PointY="13" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Usuario" Width="1.5" PointX="3" PointY="11" Height="5.0571093750000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAPVENModel.T_Venta" Width="1.5" PointX="7.5" PointY="16.375" Height="2.1725878906250031" IsExpanded="true" />
+        <AssociationConnector Association="SAPVENModel.FK_T_DetalleOferta_T_Caracteristica" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="6.2401432291666667" />
+          <ConnectorPoint PointX="10.5" PointY="6.2401432291666667" />
+          <ConnectorPoint PointX="10.5" PointY="9" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Producto_T_Categoria" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.2689925130208337" />
+          <ConnectorPoint PointX="5.25" PointY="5.2689925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_DetalleOferta_T_Oferta" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="10.182444661458334" />
+          <ConnectorPoint PointX="9.75" PointY="10.182444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_DetallePedido_T_Oferta" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="12.085999348958332" />
+          <ConnectorPoint PointX="9.375" PointY="12.460999348958332" />
+          <ConnectorPoint PointX="9.375" PointY="11.875" />
+          <ConnectorPoint PointX="9.75" PointY="12.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_DetallePedido_T_Pedido" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="18.708639322916667" />
+          <ConnectorPoint PointX="10.5" PointY="18.708639322916667" />
+          <ConnectorPoint PointX="10.5" PointY="14.807190755208332" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Empresa_T_Usuario" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="11.576650390625" />
+          <ConnectorPoint PointX="5.25" PointY="11.576650390625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Oferta_T_Empresa" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="10.230499674479166" />
+          <ConnectorPoint PointX="7.5" PointY="10.230499674479166" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Suscripcion_T_Empresa" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="12.15330078125" />
+          <ConnectorPoint PointX="7.125" PointY="12.52830078125" />
+          <ConnectorPoint PointX="7.125" PointY="14.182444661458334" />
+          <ConnectorPoint PointX="7.5" PointY="14.182444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Mensaje_T_Usuario" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.153595377604166" />
+          <ConnectorPoint PointX="5.25" PointY="14.153595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Mensaje_T_Usuario1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.451797688802083" />
+          <ConnectorPoint PointX="5.25" PointY="13.451797688802083" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Oferta_T_Producto" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="6.2975878906250031" />
+          <ConnectorPoint PointX="7.125" PointY="6.6725878906250031" />
+          <ConnectorPoint PointX="7.125" PointY="9.2714978372395827" />
+          <ConnectorPoint PointX="7.5" PointY="9.2714978372395827" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Pedido_T_Usuario" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="16.057109375000003" />
+          <ConnectorPoint PointX="3.75" PointY="17.528595377604166" />
+          <ConnectorPoint PointX="5.25" PointY="17.528595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Venta_T_Pedido" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="17.4612939453125" />
+          <ConnectorPoint PointX="7.5" PointY="17.4612939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_PerfilxPermiso_T_Perfil" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.7511528461538468" />
+          <ConnectorPoint PointX="2.625" PointY="9.3761528461538468" />
+          <ConnectorPoint PointX="2.625" PointY="10.106439304487179" />
+          <ConnectorPoint PointX="3.0011528461538459" PointY="9.7302864583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Usuario_T_Perfil" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.365143229166666" />
+          <ConnectorPoint PointX="3" PointY="11.365143229166666" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_PerfilxPermiso_T_Permiso" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.2401432291666676" />
+          <ConnectorPoint PointX="3" PointY="8.2401432291666676" />
+        </AssociationConnector>
+        <AssociationConnector Association="SAPVENModel.FK_T_Suscripcion_T_Usuario" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="15.775900065104167" />
+          <ConnectorPoint PointX="8.25" PointY="15.775900065104167" />
+          <ConnectorPoint PointX="8.25" PointY="15.364889322916667" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

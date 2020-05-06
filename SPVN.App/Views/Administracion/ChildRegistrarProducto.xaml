@@ -1,0 +1,37 @@
+﻿<controls:ChildWindow xmlns:toolkit="clr-namespace:System.Windows.Controls.Theming;assembly=System.Windows.Controls.Theming.ShinyBlue"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:toolkit1="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"  x:Class="SPVN.App.Views.Administracion.ChildRegistrarProducto"
+           Width="400" Height="300" Title="Registrar Producto">
+    <toolkit:ShinyBlueTheme Background="Transparent">
+        <Grid x:Name="LayoutRoot" Margin="2">
+            <Grid.RowDefinitions>
+            	<RowDefinition />
+            	<RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                
+            	<toolkit1:DataField Margin="0" Label="Descripción Producto">
+            		<TextBox x:Name="txtDescripcionProducto" HorizontalAlignment="Right" Margin="0,5" TextWrapping="Wrap" VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height"/>
+            	</toolkit1:DataField>
+            	<toolkit1:DataField Margin="0,5" Label="Categoria">
+            		<ComboBox x:Name="cmbCategorias" Margin="0" DisplayMemberPath="Nombre_Categoria" SelectedValuePath="ID_Categoria" HorizontalContentAlignment="Stretch" HorizontalAlignment="Right" Width="200" Height="24"/>
+            	</toolkit1:DataField>
+            	<toolkit1:DataField Margin="0,5" Label="Foto">
+            		<StackPanel>
+            			    
+            				<Image x:Name="imgProducto" HorizontalAlignment="Center" Width="150" Margin="0,5" Height="100" Source="/SPVN.App;component/Images/no_image[1].gif"/>
+            			
+            			    <Button x:Name="btnSeleccionar" Content="Seleccionar Imagen" HorizontalAlignment="Right" Margin="0,10,20,0"/>   		
+					</StackPanel>
+            	</toolkit1:DataField>
+                
+            </StackPanel>
+
+            <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+            <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        </Grid>
+    </toolkit:ShinyBlueTheme>
+</controls:ChildWindow>

@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AFABF63-8365-4B2E-BC2E-A1C9FB9324A4}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPVN.ViewModel</RootNamespace>
+    <AssemblyName>SPVN.ViewModel</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20408.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FJ.Core">
+      <HintPath>..\..\..\..\..\Downloads\Base64Study\SLBase64\dll\FJ.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.SL4">
+      <HintPath>C:\Program Files\Laurent Bugnion (GalaSoft)\Mvvm Light Toolkit\Binaries\Silverlight4\GalaSoft.MvvmLight.SL4.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="SStuff.FlowControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Downloads\Slflow-src\SStuff.FlowControls\Bin\Debug\SStuff.FlowControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit" />
+    <Reference Include="System.Windows.Controls.Data.Input" />
+    <Reference Include="System.Windows.Controls.Theming.ShinyBlue" />
+    <Reference Include="System.Windows.Controls.Theming.Toolkit" />
+    <Reference Include="System.Windows.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPerfilesViewModel.cs" />
+    <Compile Include="AdminPermisosViewModel.cs" />
+    <Compile Include="AdminPermisosxPerfilViewModel.cs" />
+    <Compile Include="AdminProductosViewModel.cs" />
+    <Compile Include="BusquedaProductosViewModel.cs" />
+    <Compile Include="Command\AdminPerfiles\DeletePerfilCommand.cs" />
+    <Compile Include="Command\AdminPerfiles\InsertPerfilCommand.cs" />
+    <Compile Include="Command\AdminPerfiles\SelectAllPerfilCommand.cs" />
+    <Compile Include="Command\AdminPerfiles\UpdatePerfilCommand.cs" />
+    <Compile Include="Command\AdminPerfiles\ViewDetailsPerfilCommand.cs" />
+    <Compile Include="Command\AdminPermisos\DeletePermisoCommand.cs" />
+    <Compile Include="Command\AdminPermisos\InsertPermisoCommand.cs" />
+    <Compile Include="Command\AdminPermisos\SelectAllPermisoCommand.cs" />
+    <Compile Include="Command\AdminPermisos\UpdatePermisoCommand.cs" />
+    <Compile Include="Command\AdminPermisos\ViewDetailsPermisoCommand.cs" />
+    <Compile Include="Command\AdminProductos\DeleteProductoCommand.cs" />
+    <Compile Include="Command\AdminProductos\InsertProductoCommand.cs" />
+    <Compile Include="Command\AdminProductos\SelectAllProductoCommand.cs" />
+    <Compile Include="Command\AdminProductos\SelectImageProdtuctoCommand.cs" />
+    <Compile Include="Command\AdminProductos\UpdateProductoCommand.cs" />
+    <Compile Include="Command\AdminProductos\ViewDetailsProductoCommand.cs" />
+    <Compile Include="Command\AdminUsuario\InsertUsuario.cs" />
+    <Compile Include="Command\RegisterUsuario\RegisterUsuario.cs" />
+    <Compile Include="Helpers\AdminPerfiles\ChildRegistrarPerfil.xaml.cs">
+      <DependentUpon>ChildRegistrarPerfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AdminPermisos\ChildActualizarPermiso.xaml.cs">
+      <DependentUpon>ChildActualizarPermiso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AdminPermisos\ChildRegistrarPermiso.xaml.cs">
+      <DependentUpon>ChildRegistrarPermiso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AdminProductos\ChildRegistrarProducto.xaml.cs">
+      <DependentUpon>ChildRegistrarProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CustomControls\ImageCollectionViewer.xaml.cs">
+      <DependentUpon>ImageCollectionViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyViewModelBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationViewModel.cs" />
+    <Compile Include="Service References\SPVNServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPVNServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SPVNServices\configuration.svcinfo" />
+    <None Include="Service References\SPVNServices\configuration91.svcinfo" />
+    <None Include="Service References\SPVNServices\SPVN.ViewModel.SPVNServices.T_Categoria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPVNServices\SPVN.ViewModel.SPVNServices.T_Perfil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPVNServices\SPVN.ViewModel.SPVNServices.T_Permiso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPVNServices\SPVN.ViewModel.SPVNServices.T_Producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SPVNServices\SPVNServices.disco" />
+    <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\SPVNServices\SPVNServices1.wsdl" />
+    <None Include="Service References\SPVNServices\SPVNServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPVNServices\SPVNServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SPVNServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SPVNServices\SPVNServices.wsdl" />
+    <None Include="Service References\SPVNServices\SPVNServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPVNServices\SPVNServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SPVNServices\SPVNServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converters\" />
+    <Folder Include="Helpers\Login\" />
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Helpers\AdminPerfiles\ChildRegistrarPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helpers\AdminPermisos\ChildActualizarPermiso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helpers\AdminPermisos\ChildRegistrarPermiso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helpers\AdminProductos\ChildRegistrarProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helpers\CustomControls\ImageCollectionViewer.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

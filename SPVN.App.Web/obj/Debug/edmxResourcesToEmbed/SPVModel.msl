@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SAPVENModelStoreContainer" CdmEntityContainer="SAPVENEntities">
+    <EntitySetMapping Name="T_Caracteristica">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Caracteristica">
+        <MappingFragment StoreEntitySet="T_Caracteristica">
+          <ScalarProperty Name="ID_Caracteristica" ColumnName="ID_Caracteristica" />
+          <ScalarProperty Name="Nombre_Caracteristica" ColumnName="Nombre_Caracteristica" />
+          <ScalarProperty Name="Descripcion_Caracteristica" ColumnName="Descripcion_Caracteristica" />
+          <ScalarProperty Name="Tipo_Caracteristica" ColumnName="Tipo_Caracteristica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Categoria">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Categoria">
+        <MappingFragment StoreEntitySet="T_Categoria">
+          <ScalarProperty Name="ID_Categoria" ColumnName="ID_Categoria" />
+          <ScalarProperty Name="Nombre_Categoria" ColumnName="Nombre_Categoria" />
+          <ScalarProperty Name="Descripcion_Categoria" ColumnName="Descripcion_Categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_DetalleOferta">
+      <EntityTypeMapping TypeName="SAPVENModel.T_DetalleOferta">
+        <MappingFragment StoreEntitySet="T_DetalleOferta">
+          <ScalarProperty Name="ID_DetalleOferta" ColumnName="ID_DetalleOferta" />
+          <ScalarProperty Name="ID_Oferta" ColumnName="ID_Oferta" />
+          <ScalarProperty Name="ID_Caracteristica" ColumnName="ID_Caracteristica" />
+          <ScalarProperty Name="Valor_DetalleOferta" ColumnName="Valor_DetalleOferta" />
+          <ScalarProperty Name="FechaModificacion_DetalleOferta" ColumnName="FechaModificacion_DetalleOferta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_DetallePedido">
+      <EntityTypeMapping TypeName="SAPVENModel.T_DetallePedido">
+        <MappingFragment StoreEntitySet="T_DetallePedido">
+          <ScalarProperty Name="ID_DetallePeddo" ColumnName="ID_DetallePeddo" />
+          <ScalarProperty Name="ID_Oferta" ColumnName="ID_Oferta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="FechaModificacion_DetallePedido" ColumnName="FechaModificacion_DetallePedido" />
+          <ScalarProperty Name="ID_Pedido" ColumnName="ID_Pedido" />
+          <ScalarProperty Name="Vigente_Pedido" ColumnName="Vigente_Pedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Empresa">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Empresa">
+        <MappingFragment StoreEntitySet="T_Empresa">
+          <ScalarProperty Name="RUC_Empresa" ColumnName="RUC_Empresa" />
+          <ScalarProperty Name="RazónSocial_Empresa" ColumnName="RazónSocial_Empresa" />
+          <ScalarProperty Name="Direccion_Empresa" ColumnName="Direccion_Empresa" />
+          <ScalarProperty Name="Telefono_Empresa" ColumnName="Telefono_Empresa" />
+          <ScalarProperty Name="Pais_Empresa" ColumnName="Pais_Empresa" />
+          <ScalarProperty Name="Correo_Empresa" ColumnName="Correo_Empresa" />
+          <ScalarProperty Name="Descripcion_Empresa" ColumnName="Descripcion_Empresa" />
+          <ScalarProperty Name="MaxCapProd_Empresa" ColumnName="MaxCapProd_Empresa" />
+          <ScalarProperty Name="FechaRegistro_Empresa" ColumnName="FechaRegistro_Empresa" />
+          <ScalarProperty Name="Logo_Empresa" ColumnName="Logo_Empresa" />
+          <ScalarProperty Name="Movil_Empresa" ColumnName="Movil_Empresa" />
+          <ScalarProperty Name="ID_UsuarioRepresentante" ColumnName="ID_UsuarioRepresentante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Mensaje">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Mensaje">
+        <MappingFragment StoreEntitySet="T_Mensaje">
+          <ScalarProperty Name="ID_Mensaje" ColumnName="ID_Mensaje" />
+          <ScalarProperty Name="Contenido_Mensaje" ColumnName="Contenido_Mensaje" />
+          <ScalarProperty Name="FechaRegistro_Mensaje" ColumnName="FechaRegistro_Mensaje" />
+          <ScalarProperty Name="ID_UsuarioEnviante" ColumnName="ID_UsuarioEnviante" />
+          <ScalarProperty Name="ID_UsuarioReceptor" ColumnName="ID_UsuarioReceptor" />
+          <ScalarProperty Name="EsPublico_Mensaje" ColumnName="EsPublico_Mensaje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Oferta">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Oferta">
+        <MappingFragment StoreEntitySet="T_Oferta">
+          <ScalarProperty Name="ID_Oferta" ColumnName="ID_Oferta" />
+          <ScalarProperty Name="ManejaStock_Oferta" ColumnName="ManejaStock_Oferta" />
+          <ScalarProperty Name="Stock_Oferta" ColumnName="Stock_Oferta" />
+          <ScalarProperty Name="Observacion_Oferta" ColumnName="Observacion_Oferta" />
+          <ScalarProperty Name="Ranking_Oferta" ColumnName="Ranking_Oferta" />
+          <ScalarProperty Name="HastaTerminado_Oferta" ColumnName="HastaTerminado_Oferta" />
+          <ScalarProperty Name="FechaInicio_Oferta" ColumnName="FechaInicio_Oferta" />
+          <ScalarProperty Name="FechaFin_Oferta" ColumnName="FechaFin_Oferta" />
+          <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
+          <ScalarProperty Name="ID_Empresa" ColumnName="ID_Empresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Pedido">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Pedido">
+        <MappingFragment StoreEntitySet="T_Pedido">
+          <ScalarProperty Name="ID_Pedido" ColumnName="ID_Pedido" />
+          <ScalarProperty Name="FechaApertura_Pedido" ColumnName="FechaApertura_Pedido" />
+          <ScalarProperty Name="EsOfertado_Pedido" ColumnName="EsOfertado_Pedido" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Perfil">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Perfil">
+        <MappingFragment StoreEntitySet="T_Perfil">
+          <ScalarProperty Name="ID_Perfil" ColumnName="ID_Perfil" />
+          <ScalarProperty Name="Nombre_Perfil" ColumnName="Nombre_Perfil" />
+          <ScalarProperty Name="Descripcion_Perfil" ColumnName="Descripcion_Perfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PerfilxPermiso">
+      <EntityTypeMapping TypeName="SAPVENModel.T_PerfilxPermiso">
+        <MappingFragment StoreEntitySet="T_PerfilxPermiso">
+          <ScalarProperty Name="ID_Perfil" ColumnName="ID_Perfil" />
+          <ScalarProperty Name="ID_Permiso" ColumnName="ID_Permiso" />
+          <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Permiso">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Permiso">
+        <MappingFragment StoreEntitySet="T_Permiso">
+          <ScalarProperty Name="ID_Permiso" ColumnName="ID_Permiso" />
+          <ScalarProperty Name="Nombre_Permiso" ColumnName="Nombre_Permiso" />
+          <ScalarProperty Name="Descripcion_Permiso" ColumnName="Descripcion_Permiso" />
+          <ScalarProperty Name="NombrePaquete_Permiso" ColumnName="NombrePaquete_Permiso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Producto">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Producto">
+        <MappingFragment StoreEntitySet="T_Producto">
+          <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
+          <ScalarProperty Name="Descripcion_Producto" ColumnName="Descripcion_Producto" />
+          <ScalarProperty Name="Foto_Producto" ColumnName="Foto_Producto" />
+          <ScalarProperty Name="ID_Categoria" ColumnName="ID_Categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Suscripcion">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Suscripcion">
+        <MappingFragment StoreEntitySet="T_Suscripcion">
+          <ScalarProperty Name="PermitirCorreo_Suscripcion" ColumnName="PermitirCorreo_Suscripcion" />
+          <ScalarProperty Name="FechaRegistro_Suscripcion" ColumnName="FechaRegistro_Suscripcion" />
+          <ScalarProperty Name="Estado_Suscripcion" ColumnName="Estado_Suscripcion" />
+          <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+          <ScalarProperty Name="ID_Empresa" ColumnName="ID_Empresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Usuario">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Usuario">
+        <MappingFragment StoreEntitySet="T_Usuario">
+          <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="ApellidoPaterno_Usuario" ColumnName="ApellidoPaterno_Usuario" />
+          <ScalarProperty Name="ApellidoMaterno_Usuario" ColumnName="ApellidoMaterno_Usuario" />
+          <ScalarProperty Name="NombreRegistro_Usuario" ColumnName="NombreRegistro_Usuario" />
+          <ScalarProperty Name="FechaRegistro_Usuario" ColumnName="FechaRegistro_Usuario" />
+          <ScalarProperty Name="Correo_Usuario" ColumnName="Correo_Usuario" />
+          <ScalarProperty Name="Contraseña_Usuario" ColumnName="Contraseña_Usuario" />
+          <ScalarProperty Name="Foto_Usuario" ColumnName="Foto_Usuario" />
+          <ScalarProperty Name="Estado_Usuario" ColumnName="Estado_Usuario" />
+          <ScalarProperty Name="Pais_Usuario" ColumnName="Pais_Usuario" />
+          <ScalarProperty Name="Direccion_Usuario" ColumnName="Direccion_Usuario" />
+          <ScalarProperty Name="FechaNacimiento_Usuario" ColumnName="FechaNacimiento_Usuario" />
+          <ScalarProperty Name="NotificarCorreo_Usuario" ColumnName="NotificarCorreo_Usuario" />
+          <ScalarProperty Name="ID_Perfil" ColumnName="ID_Perfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Venta">
+      <EntityTypeMapping TypeName="SAPVENModel.T_Venta">
+        <MappingFragment StoreEntitySet="T_Venta">
+          <ScalarProperty Name="ID_Venta" ColumnName="ID_Venta" />
+          <ScalarProperty Name="ID_Pedido" ColumnName="ID_Pedido" />
+          <ScalarProperty Name="FechaRegistro_Venta" ColumnName="FechaRegistro_Venta" />
+          <ScalarProperty Name="Satisfecho_Venta" ColumnName="Satisfecho_Venta" />
+          <ScalarProperty Name="Observaciones_Venta" ColumnName="Observaciones_Venta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

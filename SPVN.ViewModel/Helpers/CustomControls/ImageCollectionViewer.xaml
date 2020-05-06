@@ -1,0 +1,13 @@
+﻿<sdk:ChildWindow	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	xmlns:SStuff_FlowControls="clr-namespace:SStuff.FlowControls;assembly=SStuff.FlowControls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"	x:Class="SPVN.ViewModel.ImageCollectionViewer"
+	Title="ImageCollectionViewer"
+	Width="600" Height="400" Style="{StaticResource ChildWindowStyle1}" BorderBrush="{x:Null}">
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<SStuff_FlowControls:FlowItemsControl2D Margin="0" d:LayoutOverrides="Width" ItemContainerStyle="{StaticResource FlowItem2DStyle1}" VerticalAlignment="Top"/>
+	</Grid>
+</sdk:ChildWindow>

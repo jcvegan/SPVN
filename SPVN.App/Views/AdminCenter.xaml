@@ -1,0 +1,32 @@
+﻿<sdk:Page	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:Blacklight_Controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls" 
+	xmlns:SPVN_App_Views_Administracion="clr-namespace:SPVN.App.Views.Administracion" 
+	mc:Ignorable="d"
+	x:Class="SPVN.App.AdminCenter" 
+	Title="AdminCenter Page"
+	d:DesignWidth="640" d:DesignHeight="480">
+	
+	<Grid x:Name="LayoutRoot" >
+		<Blacklight_Controls:DragDockPanelHost Margin="0" MinimizedRowHeight="27">
+			<Blacklight_Controls:DragDockPanel d:LayoutOverrides="Width, Height"  Style="{StaticResource DragDockPanelControlStyle}" Margin="5" Header="Permisos">
+                <SPVN_App_Views_Administracion:AdminPermisos/>
+			</Blacklight_Controls:DragDockPanel>
+            <Blacklight_Controls:DragDockPanel Header="Perfiles" Style="{StaticResource DragDockPanelControlStyle}" Margin="5">
+                <SPVN_App_Views_Administracion:AdminPerfiles/>
+            </Blacklight_Controls:DragDockPanel>
+            <Blacklight_Controls:DragDockPanel Header="Categorias" d:LayoutOverrides="Width, Height"  Style="{StaticResource DragDockPanelControlStyle}" Margin="5">
+                <SPVN_App_Views_Administracion:AdminCategorias/>
+            </Blacklight_Controls:DragDockPanel>
+            <Blacklight_Controls:DragDockPanel Header="Permisos por Perfil" Style="{StaticResource DragDockPanelControlStyle}" Margin="5">
+                <SPVN_App_Views_Administracion:AdminPermisosxPerfil/>
+            </Blacklight_Controls:DragDockPanel>
+            <Blacklight_Controls:DragDockPanel Header="Productos" Style="{StaticResource DragDockPanelControlStyle}" Margin="5">
+                <SPVN_App_Views_Administracion:AdminProductos/>
+            </Blacklight_Controls:DragDockPanel>
+        </Blacklight_Controls:DragDockPanelHost>
+	</Grid>
+</sdk:Page>

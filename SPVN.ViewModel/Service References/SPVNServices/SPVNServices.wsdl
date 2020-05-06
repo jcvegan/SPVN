@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:52878/Services/SPVNServices.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:52878/Services/SPVNServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52878/Services/SPVNServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SPVN.App.Web" />
+      <xsd:import schemaLocation="http://localhost:52878/Services/SPVNServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:52878/Services/SPVNServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SPVNServices_SeleccionarTodosPermiso_InputMessage">
+    <wsdl:part name="parameters" element="SeleccionarTodosPermiso" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_SeleccionarTodosPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="SeleccionarTodosPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_RegistrarPermiso_InputMessage">
+    <wsdl:part name="parameters" element="RegistrarPermiso" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_RegistrarPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="RegistrarPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_ActualizarPermiso_InputMessage">
+    <wsdl:part name="parameters" element="ActualizarPermiso" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_ActualizarPermiso_OutputMessage">
+    <wsdl:part name="parameters" element="ActualizarPermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_SeleccionarTodosPerfil_InputMessage">
+    <wsdl:part name="parameters" element="SeleccionarTodosPerfil" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_SeleccionarTodosPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="SeleccionarTodosPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_RegistrarPerfil_InputMessage">
+    <wsdl:part name="parameters" element="RegistrarPerfil" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_RegistrarPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="RegistrarPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_ActualizarPerfil_InputMessage">
+    <wsdl:part name="parameters" element="ActualizarPerfil" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_ActualizarPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="ActualizarPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_EliminarPerfil_InputMessage">
+    <wsdl:part name="parameters" element="EliminarPerfil" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_EliminarPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="EliminarPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_SeleccionarTodosProductos_InputMessage">
+    <wsdl:part name="parameters" element="SeleccionarTodosProductos" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_SeleccionarTodosProductos_OutputMessage">
+    <wsdl:part name="parameters" element="SeleccionarTodosProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_RegistrarProducto_InputMessage">
+    <wsdl:part name="parameters" element="RegistrarProducto" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_RegistrarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="RegistrarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_ActualizarProducto_InputMessage">
+    <wsdl:part name="parameters" element="ActualizarProducto" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_ActualizarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="ActualizarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_EliminarProducto_InputMessage">
+    <wsdl:part name="parameters" element="EliminarProducto" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_EliminarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="EliminarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_SeleccionarTodasCategorias_InputMessage">
+    <wsdl:part name="parameters" element="SeleccionarTodasCategorias" />
+  </wsdl:message>
+  <wsdl:message name="SPVNServices_SeleccionarTodasCategorias_OutputMessage">
+    <wsdl:part name="parameters" element="SeleccionarTodasCategoriasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SPVNServices">
+    <wsdl:operation name="SeleccionarTodosPermiso">
+      <wsdl:input wsaw:Action="urn:SPVNServices/SeleccionarTodosPermiso" message="SPVNServices_SeleccionarTodosPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/SeleccionarTodosPermisoResponse" message="SPVNServices_SeleccionarTodosPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPermiso">
+      <wsdl:input wsaw:Action="urn:SPVNServices/RegistrarPermiso" message="SPVNServices_RegistrarPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/RegistrarPermisoResponse" message="SPVNServices_RegistrarPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPermiso">
+      <wsdl:input wsaw:Action="urn:SPVNServices/ActualizarPermiso" message="SPVNServices_ActualizarPermiso_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/ActualizarPermisoResponse" message="SPVNServices_ActualizarPermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTodosPerfil">
+      <wsdl:input wsaw:Action="urn:SPVNServices/SeleccionarTodosPerfil" message="SPVNServices_SeleccionarTodosPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/SeleccionarTodosPerfilResponse" message="SPVNServices_SeleccionarTodosPerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPerfil">
+      <wsdl:input wsaw:Action="urn:SPVNServices/RegistrarPerfil" message="SPVNServices_RegistrarPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/RegistrarPerfilResponse" message="SPVNServices_RegistrarPerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPerfil">
+      <wsdl:input wsaw:Action="urn:SPVNServices/ActualizarPerfil" message="SPVNServices_ActualizarPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/ActualizarPerfilResponse" message="SPVNServices_ActualizarPerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPerfil">
+      <wsdl:input wsaw:Action="urn:SPVNServices/EliminarPerfil" message="SPVNServices_EliminarPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/EliminarPerfilResponse" message="SPVNServices_EliminarPerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTodosProductos">
+      <wsdl:input wsaw:Action="urn:SPVNServices/SeleccionarTodosProductos" message="SPVNServices_SeleccionarTodosProductos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/SeleccionarTodosProductosResponse" message="SPVNServices_SeleccionarTodosProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarProducto">
+      <wsdl:input wsaw:Action="urn:SPVNServices/RegistrarProducto" message="SPVNServices_RegistrarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/RegistrarProductoResponse" message="SPVNServices_RegistrarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProducto">
+      <wsdl:input wsaw:Action="urn:SPVNServices/ActualizarProducto" message="SPVNServices_ActualizarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/ActualizarProductoResponse" message="SPVNServices_ActualizarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProducto">
+      <wsdl:input wsaw:Action="urn:SPVNServices/EliminarProducto" message="SPVNServices_EliminarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/EliminarProductoResponse" message="SPVNServices_EliminarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTodasCategorias">
+      <wsdl:input wsaw:Action="urn:SPVNServices/SeleccionarTodasCategorias" message="SPVNServices_SeleccionarTodasCategorias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SPVNServices/SeleccionarTodasCategoriasResponse" message="SPVNServices_SeleccionarTodasCategorias_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

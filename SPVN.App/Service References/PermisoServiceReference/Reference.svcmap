@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d229ed0f-9d5e-42b9-b0a7-2e3dd5403edb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52878/Services/PermisoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PermisoService.xsd" MetadataType="Schema" ID="72a61b93-afbc-4478-9f59-6160b355a94c" SourceId="1" SourceUrl="http://localhost:52878/Services/PermisoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PermisoService1.xsd" MetadataType="Schema" ID="cfbb6429-fd1e-4d23-a161-a9c28c1b6fc8" SourceId="1" SourceUrl="http://localhost:52878/Services/PermisoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PermisoService.wsdl" MetadataType="Wsdl" ID="9d42d239-0b79-4fdf-9c0b-6535af707af2" SourceId="1" SourceUrl="http://localhost:52878/Services/PermisoService.svc?wsdl" />
+    <MetadataFile FileName="PermisoService2.xsd" MetadataType="Schema" ID="7c554c14-f75b-460d-a22b-bcdfd55c5fd7" SourceId="1" SourceUrl="http://localhost:52878/Services/PermisoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PermisoService.disco" MetadataType="Disco" ID="f4f591d1-00f3-4c04-9f4f-811d90682021" SourceId="1" SourceUrl="http://localhost:52878/Services/PermisoService.svc?disco" />
+    <MetadataFile FileName="PermisoService3.xsd" MetadataType="Schema" ID="25a4fdba-9b53-4140-9849-05ec877213d8" SourceId="1" SourceUrl="http://localhost:52878/Services/PermisoService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PermisoService1.wsdl" MetadataType="Wsdl" ID="c67e9ae8-6f0e-4c6a-b293-3f2f38f70fa4" SourceId="1" SourceUrl="http://localhost:52878/Services/PermisoService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="PermisoService4.xsd" MetadataType="Schema" ID="379d2b4f-bf9e-4b87-96d0-62d5b751d3a4" SourceId="1" SourceUrl="http://localhost:52878/Services/PermisoService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

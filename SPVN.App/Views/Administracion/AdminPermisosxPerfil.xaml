@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="SPVN.App.Views.Administracion.AdminPermisosxPerfil"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+	         xmlns:Blacklight_Controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls" 
+             xmlns:inputToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input"
+             xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+             xmlns:ViewModel="clr-namespace:SPVN.ViewModel;assembly=SPVN.ViewModel"
+             xmlns:my1="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input"
+             xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+             mc:Ignorable="d"
+    >
+    <UserControl.Resources>
+        <ViewModel:AdminPermisosxPerfilViewModel x:Key="vm"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" DataContext="{StaticResource vm}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <toolkit:ShinyBlueTheme Grid.Row="0" Grid.ColumnSpan="2" Height="27" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Content="Perfil" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                <ComboBox Grid.Row="0" Grid.Column="0" Margin="10,0,0,0" DisplayMemberPath="Nombre_Perfil" SelectedValuePath="ID_Perfil" ItemsSource="{Binding ListPerfil}" Width="160" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+            </StackPanel>
+        </toolkit:ShinyBlueTheme>
+        
+        <sdk:Label Content="Permisos" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,15,0,0"/>
+        <toolkit:ShinyBlueTheme HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" Grid.Column="0" Grid.Row="1" Margin="15,35,15,15">
+            <toolkit:DataGridDragDropTarget Grid.Column="0" Grid.Row="1" Margin="15,35,15,15" Background="Transparent" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" Name="dgPermisos">
+                <sdk:DataGrid AutoGenerateColumns="False" ItemsSource="{Binding ListPermiso}">
+                    <sdk:DataGrid.Columns>
+                        <sdk:DataGridTextColumn Header="Nombre" Binding="{Binding Path=Nombre_Permiso}"/>
+                        <sdk:DataGridTextColumn Header="Descripción" Binding="{Binding Path=Descripcion_Permiso}"/>
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+            </toolkit:DataGridDragDropTarget>
+        </toolkit:ShinyBlueTheme>
+        <toolkit:ShinyBlueTheme Grid.Column="1" Grid.Row="1" Margin="15,35,15,15" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent">
+            <toolkit:DataGridDragDropTarget Name="PerfilxPermisoTarget" Grid.Column="1"  Grid.Row="1"  Margin="15,35,15,15" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Drop="PerfilxPermisoTarget_Drop">
+                <sdk:DataGrid  AllowDrop="True" Name="dgPermisosxPerfil" ItemsSource="{Binding Path=ListPermisosxPerfil}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoGenerateColumns="False">
+                    <sdk:DataGrid.Columns>
+                        <sdk:DataGridTextColumn Header="Nombre" Binding="{Binding Path=Nombre_Permiso}"/>
+                        <sdk:DataGridTextColumn Header="Descripción" Binding="{Binding Path=Descripcion_Permiso}"/>
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+            </toolkit:DataGridDragDropTarget>
+        </toolkit:ShinyBlueTheme>
+        <toolkit:BusyIndicator Grid.RowSpan="2" Grid.ColumnSpan="2" BusyContent="{Binding Path=StateAction}" IsBusy="{Binding Path=IsBusy}"/>
+    </Grid>
+</UserControl>

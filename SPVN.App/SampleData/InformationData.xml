@@ -1,0 +1,50 @@
+﻿<About>
+  <AboutItem>
+    <Image>/SPVN.App;component/Images/1.png</Image>
+    <Header>Encuentra</Header>
+    <Content>Esa prenda que buscaste hasta el cansancio. Aquí encontrarás todo tipo de ropa a tu medida.</Content>
+    <Area>Cliente</Area>
+  </AboutItem>
+  <AboutItem>
+    <Image>/SPVN.App;component/Images/2.png</Image>
+    <Header>Compra</Header>
+    <Content>La ropa que más te guste. Por este portal de ventas, diviertete y ahorra tiempo comprando por internet.</Content>
+    <Area>Cliente</Area>
+  </AboutItem>
+  <AboutItem>
+    <Image>/SPVN.App;component/Images/3.png</Image>
+    <Header></Header>
+    <Content></Content>
+    <Area></Area>
+  </AboutItem>
+  <AboutItem>
+    <Image>/SPVN.App;component/Images/4.png</Image>
+    <Header></Header>
+    <Content></Content>
+    <Area></Area>
+  </AboutItem>
+  <AboutItem>
+    <Image></Image>
+    <Header></Header>
+    <Content></Content>
+    <Area></Area>
+  </AboutItem>
+  <AboutItem>
+    <Image></Image>
+    <Header></Header>
+    <Content></Content>
+    <Area></Area>
+  </AboutItem>
+  <AboutItem>
+    <Image></Image>
+    <Header></Header>
+    <Content></Content>
+    <Area></Area>
+  </AboutItem>
+  <AboutItem>
+    <Image></Image>
+    <Header></Header>
+    <Content></Content>
+    <Area></Area>
+  </AboutItem>
+</About>

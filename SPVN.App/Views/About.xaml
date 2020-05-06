@@ -1,0 +1,30 @@
+﻿<navigation:Page 
+  x:Class="SPVN.App.About" 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+  xmlns:SStuff_FlowControls="clr-namespace:SStuff.FlowControls;assembly=SStuff.FlowControls"
+  mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480"  
+  Style="{StaticResource PageStyle}">
+
+  <Grid x:Name="LayoutRoot">
+      <Grid.RowDefinitions>
+          <RowDefinition/>
+          <RowDefinition/>
+      </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+            <SStuff_FlowControls:FlowItemsControl2D Grid.Row="0" Grid.ColumnSpan="2" Margin="0" d:LayoutOverrides="Width, Height" ItemContainerStyle="{StaticResource FlowItem2DStyle}">
+            <Image Source="/SPVN.App;component/Images/1.png"/>
+            <Image Source="/SPVN.App;component/Images/2.png"/>
+            <Image Source="/SPVN.App;component/Images/3.png"/>
+            <Image Source="/SPVN.App;component/Images/4.png"/>
+        </SStuff_FlowControls:FlowItemsControl2D>
+    </Grid>
+
+</navigation:Page>

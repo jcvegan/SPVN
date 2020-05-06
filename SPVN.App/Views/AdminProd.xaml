@@ -1,0 +1,17 @@
+﻿<navigation:Page x:Class="SPVN.App.Views.AdminProd" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="AdminProd Page" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot">
+        <sdk:Label Height="Auto" HorizontalAlignment="Left" Margin="0" Name="label1" VerticalAlignment="Top" Width="Auto" Content="Descripciión"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="73,0,0,0" Name="textBox1" VerticalAlignment="Top" Width="233" />
+        <Image Height="150" HorizontalAlignment="Left" Margin="73,29,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="233" />
+        <Button Content="Seleccionar" Height="23" HorizontalAlignment="Left" Margin="312,29,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Button Content="Guardar" Height="23" HorizontalAlignment="Left" Margin="12,185,0,0" Name="button2" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</navigation:Page>

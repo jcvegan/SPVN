@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SPVN.App.Web.Services.PermisoService" CodeBehind="PermisoService.svc.cs" %>

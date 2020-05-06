@@ -1,0 +1,77 @@
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\bin\SPVN.App.Web.dll
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\bin\SPVN.App.Web.pdb
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\ResolveAssemblyReference.cache
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.ValidationErrorResources.resources
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.RegistrationDataResources.resources
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.1.tlog
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.1.tlog
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.dll
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.pdb
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.0.tlog
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.0.tlog
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.10.tlog
+c:\users\juan\documents\visual studio 2010\Projects\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.10.tlog
+F:\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.dll
+F:\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.pdb
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\ResolveAssemblyReference.cache
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.ValidationErrorResources.resources
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.RegistrationDataResources.resources
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.1.tlog
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.1.tlog
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.dll
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.pdb
+G:\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.dll
+G:\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.pdb
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\ResolveAssemblyReference.cache
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.ValidationErrorResources.resources
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.RegistrationDataResources.resources
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.1.tlog
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.1.tlog
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.dll
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.pdb
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.0.tlog
+G:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.0.tlog
+M:\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.dll
+M:\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.pdb
+M:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\ResolveAssemblyReference.cache
+M:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.ValidationErrorResources.resources
+M:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.RegistrationDataResources.resources
+M:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.1.tlog
+M:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.1.tlog
+M:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.dll
+M:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.pdb
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.dll
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.pdb
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.ValidationErrorResources.resources
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.RegistrationDataResources.resources
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.dll
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.pdb
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.dll
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.pdb
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.ValidationErrorResources.resources
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.RegistrationDataResources.resources
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.0.tlog
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.0.tlog
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.dll
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.pdb
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Juan\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.0.tlog
+C:\Users\Markus\Desktop\TP 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.0.tlog
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.0.tlog
+F:\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.0.tlog
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.dll
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\bin\SPVN.App.Web.pdb
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.ValidationErrorResources.resources
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.Resources.RegistrationDataResources.resources
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.0.tlog
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.0.tlog
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.dll
+C:\Taller Proyectos 2010-I\Desarrollo\SPVN\SPVN.App.Web\obj\Debug\SPVN.App.Web.pdb
